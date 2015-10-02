@@ -86987,7 +86987,90 @@ define('ember-widgets/mixins/tabbable-modal', ['exports', 'ember'], function (ex
 	exports['default'] = Ember['default'].Mixin.create({});
 
 });
-define('ember-widgets/templates/components/accordion/accordion-group', ['exports'], function (exports) {
+define('ember-widgets/templates/components/accordion-group', ['exports'], function (exports) {
+
+  'use strict';
+
+  exports['default'] = Ember.HTMLBars.template((function() {
+    return {
+      meta: {
+        "revision": "Ember@1.13.7",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 1,
+            "column": 0
+          },
+          "end": {
+            "line": 11,
+            "column": 0
+          }
+        },
+        "moduleName": "modules/ember-widgets/templates/components/accordion-group.hbs"
+      },
+      arity: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      buildFragment: function buildFragment(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createElement("div");
+        dom.setAttribute(el1,"class","panel-heading");
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("h4");
+        dom.setAttribute(el2,"class","panel-title");
+        var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createElement("a");
+        dom.setAttribute(el3,"class","accordion-toggle collapsed");
+        var el4 = dom.createTextNode("\n      ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createComment("");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n    ");
+        dom.appendChild(el3, el4);
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("\n  ");
+        dom.appendChild(el2, el3);
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createElement("div");
+        dom.setAttribute(el1,"class","panel-collapse collapse");
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("div");
+        dom.setAttribute(el2,"class","panel-body");
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+        var morphs = new Array(2);
+        morphs[0] = dom.createMorphAt(dom.childAt(fragment, [0, 1, 1]),1,1);
+        morphs[1] = dom.createMorphAt(dom.childAt(fragment, [2, 1]),0,0);
+        return morphs;
+      },
+      statements: [
+        ["content","view.title",["loc",[null,[4,6],[4,20]]]],
+        ["content","yield",["loc",[null,[9,26],[9,35]]]]
+      ],
+      locals: [],
+      templates: []
+    };
+  }()));
+
+});
+define('ember-widgets/templates/components/accordion-item', ['exports'], function (exports) {
 
   'use strict';
 
@@ -87006,7 +87089,7 @@ define('ember-widgets/templates/components/accordion/accordion-group', ['exports
             "column": 0
           }
         },
-        "moduleName": "modules/ember-widgets/templates/components/accordion/accordion-group.hbs"
+        "moduleName": "modules/ember-widgets/templates/components/accordion-item.hbs"
       },
       arity: 0,
       cachedFragment: null,
@@ -87034,7 +87117,89 @@ define('ember-widgets/templates/components/accordion/accordion-group', ['exports
   }()));
 
 });
-define('ember-widgets/templates/components/accordion/accordion-item', ['exports'], function (exports) {
+define('ember-widgets/templates/components/carousel-group', ['exports'], function (exports) {
+
+  'use strict';
+
+  exports['default'] = Ember.HTMLBars.template((function() {
+    return {
+      meta: {
+        "revision": "Ember@1.13.7",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 1,
+            "column": 0
+          },
+          "end": {
+            "line": 9,
+            "column": 0
+          }
+        },
+        "moduleName": "modules/ember-widgets/templates/components/carousel-group.hbs"
+      },
+      arity: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      buildFragment: function buildFragment(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createComment("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createElement("div");
+        dom.setAttribute(el1,"class","carousel-inner");
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createComment("");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createElement("a");
+        dom.setAttribute(el1,"class","left carousel-control");
+        dom.setAttribute(el1,"href","#");
+        var el2 = dom.createTextNode("‹");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createElement("a");
+        dom.setAttribute(el1,"class","right carousel-control");
+        dom.setAttribute(el1,"href","#");
+        var el2 = dom.createTextNode("›");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+        var element0 = dom.childAt(fragment, [4]);
+        var element1 = dom.childAt(fragment, [6]);
+        var morphs = new Array(4);
+        morphs[0] = dom.createMorphAt(fragment,0,0,contextualElement);
+        morphs[1] = dom.createMorphAt(dom.childAt(fragment, [2]),1,1);
+        morphs[2] = dom.createElementMorph(element0);
+        morphs[3] = dom.createElementMorph(element1);
+        dom.insertBoundary(fragment, 0);
+        return morphs;
+      },
+      statements: [
+        ["inline","view",[["get","Ember.CollectionView",["loc",[null,[1,7],[1,27]]]]],["tagName","ol","class","carousel-indicators","content",["subexpr","@mut",[["get","view.content",[]]],[],[]],"itemViewClass","Ember.Widgets.CarouselIndicator"],["loc",[null,[1,0],[3,2]]]],
+        ["content","yield",["loc",[null,[5,2],[5,11]]]],
+        ["element","action",["prev"],[],["loc",[null,[7,43],[7,60]]]],
+        ["element","action",["next"],[],["loc",[null,[8,43],[8,60]]]]
+      ],
+      locals: [],
+      templates: []
+    };
+  }()));
+
+});
+define('ember-widgets/templates/components/carousel-indicator', ['exports'], function (exports) {
 
   'use strict';
 
@@ -87053,7 +87218,7 @@ define('ember-widgets/templates/components/accordion/accordion-item', ['exports'
             "column": 0
           }
         },
-        "moduleName": "modules/ember-widgets/templates/components/accordion/accordion-item.hbs"
+        "moduleName": "modules/ember-widgets/templates/components/carousel-indicator.hbs"
       },
       arity: 0,
       cachedFragment: null,
@@ -87081,7 +87246,7 @@ define('ember-widgets/templates/components/accordion/accordion-item', ['exports'
   }()));
 
 });
-define('ember-widgets/templates/components/carousel/carousel-group', ['exports'], function (exports) {
+define('ember-widgets/templates/components/carousel-item', ['exports'], function (exports) {
 
   'use strict';
 
@@ -87100,7 +87265,7 @@ define('ember-widgets/templates/components/carousel/carousel-group', ['exports']
             "column": 0
           }
         },
-        "moduleName": "modules/ember-widgets/templates/components/carousel/carousel-group.hbs"
+        "moduleName": "modules/ember-widgets/templates/components/carousel-item.hbs"
       },
       arity: 0,
       cachedFragment: null,
@@ -87128,7 +87293,7 @@ define('ember-widgets/templates/components/carousel/carousel-group', ['exports']
   }()));
 
 });
-define('ember-widgets/templates/components/carousel/carousel-indicator', ['exports'], function (exports) {
+define('ember-widgets/templates/components/color-picker-cell', ['exports'], function (exports) {
 
   'use strict';
 
@@ -87147,27 +87312,23 @@ define('ember-widgets/templates/components/carousel/carousel-indicator', ['expor
             "column": 0
           }
         },
-        "moduleName": "modules/ember-widgets/templates/components/carousel/carousel-indicator.hbs"
+        "moduleName": "modules/ember-widgets/templates/components/color-picker-cell.hbs"
       },
       arity: 0,
       cachedFragment: null,
       hasRendered: false,
       buildFragment: function buildFragment(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createComment("");
+        var el1 = dom.createElement("div");
+        dom.setAttribute(el1,"class","no-color-indicator-holder");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
         return el0;
       },
-      buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-        var morphs = new Array(1);
-        morphs[0] = dom.createMorphAt(fragment,0,0,contextualElement);
-        dom.insertBoundary(fragment, 0);
-        return morphs;
-      },
+      buildRenderNodes: function buildRenderNodes() { return []; },
       statements: [
-        ["content","yield",["loc",[null,[1,0],[1,9]]]]
+
       ],
       locals: [],
       templates: []
@@ -87175,11 +87336,190 @@ define('ember-widgets/templates/components/carousel/carousel-indicator', ['expor
   }()));
 
 });
-define('ember-widgets/templates/components/carousel/carousel-item', ['exports'], function (exports) {
+define('ember-widgets/templates/components/color-picker', ['exports'], function (exports) {
 
   'use strict';
 
   exports['default'] = Ember.HTMLBars.template((function() {
+    var child0 = (function() {
+      return {
+        meta: {
+          "revision": "Ember@1.13.7",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 3,
+              "column": 4
+            },
+            "end": {
+              "line": 8,
+              "column": 4
+            }
+          },
+          "moduleName": "modules/ember-widgets/templates/components/color-picker.hbs"
+        },
+        arity: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("      ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+          var morphs = new Array(1);
+          morphs[0] = dom.createMorphAt(fragment,1,1,contextualElement);
+          return morphs;
+        },
+        statements: [
+          ["inline","view",[["get","Ember.Widgets.ColorPickerCell",["loc",[null,[4,13],[4,42]]]]],["color",["subexpr","@mut",[["get","selectedColor",[]]],[],[]],"classNames","color-picker-cell-transparent"],["loc",[null,[4,6],[7,8]]]]
+        ],
+        locals: [],
+        templates: []
+      };
+    }());
+    var child1 = (function() {
+      return {
+        meta: {
+          "revision": "Ember@1.13.7",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 8,
+              "column": 4
+            },
+            "end": {
+              "line": 12,
+              "column": 4
+            }
+          },
+          "moduleName": "modules/ember-widgets/templates/components/color-picker.hbs"
+        },
+        arity: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("      ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+          var morphs = new Array(1);
+          morphs[0] = dom.createMorphAt(fragment,1,1,contextualElement);
+          return morphs;
+        },
+        statements: [
+          ["inline","view",[["get","Ember.Widgets.ColorPickerCell",["loc",[null,[9,13],[9,42]]]]],["color",["subexpr","@mut",[["get","selectedColor",[]]],[],[]]],["loc",[null,[9,6],[11,8]]]]
+        ],
+        locals: [],
+        templates: []
+      };
+    }());
+    var child2 = (function() {
+      var child0 = (function() {
+        return {
+          meta: {
+            "revision": "Ember@1.13.7",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 19,
+                "column": 8
+              },
+              "end": {
+                "line": 23,
+                "column": 8
+              }
+            },
+            "moduleName": "modules/ember-widgets/templates/components/color-picker.hbs"
+          },
+          arity: 1,
+          cachedFragment: null,
+          hasRendered: false,
+          buildFragment: function buildFragment(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("          ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createComment("");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("\n");
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+            var morphs = new Array(1);
+            morphs[0] = dom.createMorphAt(fragment,1,1,contextualElement);
+            return morphs;
+          },
+          statements: [
+            ["inline","view",[["get","Ember.Widgets.ColorPickerCell",["loc",[null,[20,17],[20,46]]]]],["color",["subexpr","@mut",[["get","color",[]]],[],[]]],["loc",[null,[20,10],[22,13]]]]
+          ],
+          locals: ["color"],
+          templates: []
+        };
+      }());
+      return {
+        meta: {
+          "revision": "Ember@1.13.7",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 17,
+              "column": 4
+            },
+            "end": {
+              "line": 26,
+              "column": 4
+            }
+          },
+          "moduleName": "modules/ember-widgets/templates/components/color-picker.hbs"
+        },
+        arity: 1,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("      ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("div");
+          dom.setAttribute(el1,"class","color-row clearfix");
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("      ");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n      ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("hr");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+          var morphs = new Array(1);
+          morphs[0] = dom.createMorphAt(dom.childAt(fragment, [1]),1,1);
+          return morphs;
+        },
+        statements: [
+          ["block","each",[["get","row",["loc",[null,[19,25],[19,28]]]]],[],0,null,["loc",[null,[19,8],[23,17]]]]
+        ],
+        locals: ["row"],
+        templates: [child0]
+      };
+    }());
     return {
       meta: {
         "revision": "Ember@1.13.7",
@@ -87190,128 +87530,113 @@ define('ember-widgets/templates/components/carousel/carousel-item', ['exports'],
             "column": 0
           },
           "end": {
-            "line": 2,
+            "line": 43,
             "column": 0
           }
         },
-        "moduleName": "modules/ember-widgets/templates/components/carousel/carousel-item.hbs"
+        "moduleName": "modules/ember-widgets/templates/components/color-picker.hbs"
       },
       arity: 0,
       cachedFragment: null,
       hasRendered: false,
       buildFragment: function buildFragment(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createComment("");
+        var el1 = dom.createElement("div");
+        dom.setAttribute(el1,"class","dropdown");
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("a");
+        dom.setAttribute(el2,"class","clearfix color-picker-dropdown-button");
+        dom.setAttribute(el2,"data-toggle","dropdown");
+        dom.setAttribute(el2,"href","#");
+        var el3 = dom.createTextNode("\n");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createElement("span");
+        dom.setAttribute(el3,"class","pull-right fa fa-caret-down color-picker-dropdown-caret");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("\n  ");
+        dom.appendChild(el2, el3);
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("div");
+        dom.setAttribute(el2,"role","menu");
+        dom.setAttribute(el2,"aria-labelledby","dLabel");
+        var el3 = dom.createTextNode("\n");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createElement("form");
+        var el4 = dom.createTextNode("\n      ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createElement("div");
+        dom.setAttribute(el4,"class","form-group form-group-sm");
+        var el5 = dom.createTextNode("\n        ");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createElement("div");
+        dom.setAttribute(el5,"class","input-group");
+        var el6 = dom.createTextNode("\n          ");
+        dom.appendChild(el5, el6);
+        var el6 = dom.createElement("span");
+        dom.appendChild(el5, el6);
+        var el6 = dom.createTextNode("\n          ");
+        dom.appendChild(el5, el6);
+        var el6 = dom.createComment("");
+        dom.appendChild(el5, el6);
+        var el6 = dom.createTextNode("\n        ");
+        dom.appendChild(el5, el6);
+        dom.appendChild(el4, el5);
+        var el5 = dom.createTextNode("\n      ");
+        dom.appendChild(el4, el5);
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n    ");
+        dom.appendChild(el3, el4);
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("\n  ");
+        dom.appendChild(el2, el3);
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n");
+        dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
         return el0;
       },
       buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-        var morphs = new Array(1);
-        morphs[0] = dom.createMorphAt(fragment,0,0,contextualElement);
-        dom.insertBoundary(fragment, 0);
+        var element0 = dom.childAt(fragment, [0]);
+        var element1 = dom.childAt(element0, [3]);
+        var element2 = dom.childAt(element1, [3]);
+        var element3 = dom.childAt(element2, [1, 1]);
+        var element4 = dom.childAt(element3, [1]);
+        var morphs = new Array(8);
+        morphs[0] = dom.createMorphAt(dom.childAt(element0, [1]),1,1);
+        morphs[1] = dom.createAttrMorph(element1, 'class');
+        morphs[2] = dom.createMorphAt(element1,1,1);
+        morphs[3] = dom.createAttrMorph(element2, 'class');
+        morphs[4] = dom.createAttrMorph(element4, 'class');
+        morphs[5] = dom.createAttrMorph(element4, 'style');
+        morphs[6] = dom.createElementMorph(element4);
+        morphs[7] = dom.createMorphAt(element3,3,3);
         return morphs;
       },
       statements: [
-        ["content","yield",["loc",[null,[1,0],[1,9]]]]
+        ["block","if",[["get","isColorTransparent",["loc",[null,[3,10],[3,28]]]]],[],0,1,["loc",[null,[3,4],[12,11]]]],
+        ["attribute","class",["concat",["dropdown-menu"," ","color-picker-dropdown"," ",["subexpr","-bind-attr-class",[["get","dropdownClass",[]],"dropdown-class"],[],[]]]]],
+        ["block","each",[["get","colorRows",["loc",[null,[17,19],[17,28]]]]],[],2,null,["loc",[null,[17,4],[26,13]]]],
+        ["attribute","class",["concat",["color-picker-custom-form"," ",["subexpr","if",[["get","isCustomColorValid",[]],"valid","invalid"],[],[]]]]],
+        ["attribute","class",["concat",["input-group-addon\n"," ",["subexpr","-bind-attr-class",[["get","",[]],""],[],[]]," ",["subexpr","-bind-attr-class",[["get","",[]],""],[],[]]," ",["subexpr","-bind-attr-class",[["get","",[]],""],[],[]]," ",["subexpr","-bind-attr-class",[["get","",[]],""],[],[]]," ",["subexpr","-bind-attr-class",[["get","",[]],""],[],[]]," ",["subexpr","-bind-attr-class",[["get","",[]],""],[],[]]," ",["subexpr","-bind-attr-class",[["get","",[]],""],[],[]]," ",["subexpr","-bind-attr-class",[["get","",[]],""],[],[]]," ",["subexpr","-bind-attr-class",[["get","",[]],""],[],[]]," ",["subexpr","-bind-attr-class",[["get","",[]],""],[],[]]," ",["subexpr","-bind-attr-class",[["get","",[]],""],[],[]]," ","color-picker-custom-preview"," ",["subexpr","if",[["get","isCustomColor",[]],"active",""],[],[]]]]],
+        ["attribute","style",["get","customColorCSS",[]]],
+        ["element","action",["sendCustomColor"],[],["loc",[null,[32,37],[32,65]]]],
+        ["inline","view",[["get","Ember.TextField",["loc",[null,[33,17],[33,32]]]]],["value",["subexpr","@mut",[["get","customColor",[]]],[],[]],"class","form-control input-sm","type","text","placeholder","HEX code"],["loc",[null,[33,10],[37,12]]]]
       ],
       locals: [],
-      templates: []
-    };
-  }()));
-
-});
-define('ember-widgets/templates/components/color-picker/color-picker-cell', ['exports'], function (exports) {
-
-  'use strict';
-
-  exports['default'] = Ember.HTMLBars.template((function() {
-    return {
-      meta: {
-        "revision": "Ember@1.13.7",
-        "loc": {
-          "source": null,
-          "start": {
-            "line": 1,
-            "column": 0
-          },
-          "end": {
-            "line": 2,
-            "column": 0
-          }
-        },
-        "moduleName": "modules/ember-widgets/templates/components/color-picker/color-picker-cell.hbs"
-      },
-      arity: 0,
-      cachedFragment: null,
-      hasRendered: false,
-      buildFragment: function buildFragment(dom) {
-        var el0 = dom.createDocumentFragment();
-        var el1 = dom.createComment("");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n");
-        dom.appendChild(el0, el1);
-        return el0;
-      },
-      buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-        var morphs = new Array(1);
-        morphs[0] = dom.createMorphAt(fragment,0,0,contextualElement);
-        dom.insertBoundary(fragment, 0);
-        return morphs;
-      },
-      statements: [
-        ["content","yield",["loc",[null,[1,0],[1,9]]]]
-      ],
-      locals: [],
-      templates: []
-    };
-  }()));
-
-});
-define('ember-widgets/templates/components/color-picker/color-picker', ['exports'], function (exports) {
-
-  'use strict';
-
-  exports['default'] = Ember.HTMLBars.template((function() {
-    return {
-      meta: {
-        "revision": "Ember@1.13.7",
-        "loc": {
-          "source": null,
-          "start": {
-            "line": 1,
-            "column": 0
-          },
-          "end": {
-            "line": 2,
-            "column": 0
-          }
-        },
-        "moduleName": "modules/ember-widgets/templates/components/color-picker/color-picker.hbs"
-      },
-      arity: 0,
-      cachedFragment: null,
-      hasRendered: false,
-      buildFragment: function buildFragment(dom) {
-        var el0 = dom.createDocumentFragment();
-        var el1 = dom.createComment("");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n");
-        dom.appendChild(el0, el1);
-        return el0;
-      },
-      buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-        var morphs = new Array(1);
-        morphs[0] = dom.createMorphAt(fragment,0,0,contextualElement);
-        dom.insertBoundary(fragment, 0);
-        return morphs;
-      },
-      statements: [
-        ["content","yield",["loc",[null,[1,0],[1,9]]]]
-      ],
-      locals: [],
-      templates: []
+      templates: [child0, child1, child2]
     };
   }()));
 
@@ -87321,6 +87646,95 @@ define('ember-widgets/templates/components/editable-label', ['exports'], functio
   'use strict';
 
   exports['default'] = Ember.HTMLBars.template((function() {
+    var child0 = (function() {
+      return {
+        meta: {
+          "revision": "Ember@1.13.7",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 3,
+              "column": 0
+            }
+          },
+          "moduleName": "modules/ember-widgets/templates/components/editable-label.hbs"
+        },
+        arity: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+          var morphs = new Array(1);
+          morphs[0] = dom.createMorphAt(fragment,1,1,contextualElement);
+          return morphs;
+        },
+        statements: [
+          ["inline","view",[["get","view.innerTextField",["loc",[null,[2,9],[2,28]]]]],[],["loc",[null,[2,2],[2,30]]]]
+        ],
+        locals: [],
+        templates: []
+      };
+    }());
+    var child1 = (function() {
+      return {
+        meta: {
+          "revision": "Ember@1.13.7",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 3,
+              "column": 0
+            },
+            "end": {
+              "line": 5,
+              "column": 0
+            }
+          },
+          "moduleName": "modules/ember-widgets/templates/components/editable-label.hbs"
+        },
+        arity: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("span");
+          var el2 = dom.createComment("");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+          var element0 = dom.childAt(fragment, [1]);
+          var morphs = new Array(2);
+          morphs[0] = dom.createElementMorph(element0);
+          morphs[1] = dom.createMorphAt(element0,0,0);
+          return morphs;
+        },
+        statements: [
+          ["element","action",[["get","editLabel",["loc",[null,[4,17],[4,26]]]]],["target","view"],["loc",[null,[4,8],[4,42]]]],
+          ["content","view.displayName",["loc",[null,[4,43],[4,63]]]]
+        ],
+        locals: [],
+        templates: []
+      };
+    }());
     return {
       meta: {
         "revision": "Ember@1.13.7",
@@ -87331,7 +87745,7 @@ define('ember-widgets/templates/components/editable-label', ['exports'], functio
             "column": 0
           },
           "end": {
-            "line": 2,
+            "line": 6,
             "column": 0
           }
         },
@@ -87344,21 +87758,20 @@ define('ember-widgets/templates/components/editable-label', ['exports'], functio
         var el0 = dom.createDocumentFragment();
         var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n");
-        dom.appendChild(el0, el1);
         return el0;
       },
       buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
         var morphs = new Array(1);
         morphs[0] = dom.createMorphAt(fragment,0,0,contextualElement);
         dom.insertBoundary(fragment, 0);
+        dom.insertBoundary(fragment, null);
         return morphs;
       },
       statements: [
-        ["content","yield",["loc",[null,[1,0],[1,9]]]]
+        ["block","if",[["get","view.isEditing",["loc",[null,[1,6],[1,20]]]]],[],0,1,["loc",[null,[1,0],[5,7]]]]
       ],
       locals: [],
-      templates: []
+      templates: [child0, child1]
     };
   }()));
 
@@ -87378,7 +87791,7 @@ define('ember-widgets/templates/components/modal-box', ['exports'], function (ex
             "column": 0
           },
           "end": {
-            "line": 2,
+            "line": 14,
             "column": 0
           }
         },
@@ -87389,20 +87802,344 @@ define('ember-widgets/templates/components/modal-box', ['exports'], function (ex
       hasRendered: false,
       buildFragment: function buildFragment(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createComment("");
+        var el1 = dom.createElement("div");
+        dom.setAttribute(el1,"tabindex","-1");
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("div");
+        dom.setAttribute(el2,"class","modal-content");
+        var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createElement("div");
+        dom.setAttribute(el3,"class","modal-header");
+        var el4 = dom.createTextNode("\n      ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createComment("");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n    ");
+        dom.appendChild(el3, el4);
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createElement("div");
+        dom.setAttribute(el3,"class","modal-body");
+        var el4 = dom.createTextNode("\n      ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createComment("");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n    ");
+        dom.appendChild(el3, el4);
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createElement("div");
+        dom.setAttribute(el3,"class","modal-footer");
+        var el4 = dom.createTextNode("\n      ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createComment("");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n    ");
+        dom.appendChild(el3, el4);
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("\n  ");
+        dom.appendChild(el2, el3);
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n");
+        dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
         return el0;
       },
       buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-        var morphs = new Array(1);
-        morphs[0] = dom.createMorphAt(fragment,0,0,contextualElement);
-        dom.insertBoundary(fragment, 0);
+        var element0 = dom.childAt(fragment, [0]);
+        var element1 = dom.childAt(element0, [1]);
+        var morphs = new Array(4);
+        morphs[0] = dom.createAttrMorph(element0, 'class');
+        morphs[1] = dom.createMorphAt(dom.childAt(element1, [1]),1,1);
+        morphs[2] = dom.createMorphAt(dom.childAt(element1, [3]),1,1);
+        morphs[3] = dom.createMorphAt(dom.childAt(element1, [5]),1,1);
         return morphs;
       },
       statements: [
-        ["content","yield",["loc",[null,[1,0],[1,9]]]]
+        ["attribute","class",["concat",["modal-dialog"," ",["subexpr","-bind-attr-class",[["get","sizeClass",[]],"size-class"],[],[]]]]],
+        ["inline","view",[["get","_headerViewClass",["loc",[null,[4,13],[4,29]]]]],[],["loc",[null,[4,6],[4,31]]]],
+        ["inline","view",[["get","_contentViewClass",["loc",[null,[7,13],[7,30]]]]],[],["loc",[null,[7,6],[7,32]]]],
+        ["inline","view",[["get","_footerViewClass",["loc",[null,[10,13],[10,29]]]]],[],["loc",[null,[10,6],[10,31]]]]
+      ],
+      locals: [],
+      templates: []
+    };
+  }()));
+
+});
+define('ember-widgets/templates/components/modal-footer', ['exports'], function (exports) {
+
+  'use strict';
+
+  exports['default'] = Ember.HTMLBars.template((function() {
+    var child0 = (function() {
+      return {
+        meta: {
+          "revision": "Ember@1.13.7",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 6,
+              "column": 0
+            }
+          },
+          "moduleName": "modules/ember-widgets/templates/components/modal-footer.hbs"
+        },
+        arity: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("button");
+          dom.setAttribute(el1,"type","button");
+          var el2 = dom.createComment("");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+          var element2 = dom.childAt(fragment, [1]);
+          var morphs = new Array(4);
+          morphs[0] = dom.createAttrMorph(element2, 'class');
+          morphs[1] = dom.createAttrMorph(element2, 'disabled');
+          morphs[2] = dom.createElementMorph(element2);
+          morphs[3] = dom.createMorphAt(element2,0,0);
+          return morphs;
+        },
+        statements: [
+          ["attribute","class",["concat",["btn"," ","btn-primary"," ","btn-confirm"," ",["subexpr","if",[["get","isDisabled",[]],"disabled",""],[],[]]]]],
+          ["attribute","disabled",["get","isDisabled",[]]],
+          ["element","action",["sendConfirm"],[],["loc",[null,[4,4],[4,28]]]],
+          ["content","confirmText",["loc",[null,[4,29],[4,44]]]]
+        ],
+        locals: [],
+        templates: []
+      };
+    }());
+    var child1 = (function() {
+      return {
+        meta: {
+          "revision": "Ember@1.13.7",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 8,
+              "column": 0
+            },
+            "end": {
+              "line": 12,
+              "column": 0
+            }
+          },
+          "moduleName": "modules/ember-widgets/templates/components/modal-footer.hbs"
+        },
+        arity: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("button");
+          dom.setAttribute(el1,"type","button");
+          dom.setAttribute(el1,"class","btn btn-default btn-cancel");
+          var el2 = dom.createComment("");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+          var element1 = dom.childAt(fragment, [1]);
+          var morphs = new Array(2);
+          morphs[0] = dom.createElementMorph(element1);
+          morphs[1] = dom.createMorphAt(element1,0,0);
+          return morphs;
+        },
+        statements: [
+          ["element","action",["sendCancel"],[],["loc",[null,[10,4],[10,27]]]],
+          ["content","cancelText",["loc",[null,[10,28],[10,42]]]]
+        ],
+        locals: [],
+        templates: []
+      };
+    }());
+    var child2 = (function() {
+      return {
+        meta: {
+          "revision": "Ember@1.13.7",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 14,
+              "column": 0
+            },
+            "end": {
+              "line": 18,
+              "column": 0
+            }
+          },
+          "moduleName": "modules/ember-widgets/templates/components/modal-footer.hbs"
+        },
+        arity: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("button");
+          dom.setAttribute(el1,"type","button");
+          dom.setAttribute(el1,"class","btn btn-default btn-close");
+          var el2 = dom.createComment("");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+          var element0 = dom.childAt(fragment, [1]);
+          var morphs = new Array(2);
+          morphs[0] = dom.createElementMorph(element0);
+          morphs[1] = dom.createMorphAt(element0,0,0);
+          return morphs;
+        },
+        statements: [
+          ["element","action",["sendClose"],[],["loc",[null,[16,4],[16,26]]]],
+          ["content","closeText",["loc",[null,[16,27],[16,40]]]]
+        ],
+        locals: [],
+        templates: []
+      };
+    }());
+    return {
+      meta: {
+        "revision": "Ember@1.13.7",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 1,
+            "column": 0
+          },
+          "end": {
+            "line": 19,
+            "column": 0
+          }
+        },
+        "moduleName": "modules/ember-widgets/templates/components/modal-footer.hbs"
+      },
+      arity: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      buildFragment: function buildFragment(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createComment("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createComment("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createComment("");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+        var morphs = new Array(3);
+        morphs[0] = dom.createMorphAt(fragment,0,0,contextualElement);
+        morphs[1] = dom.createMorphAt(fragment,2,2,contextualElement);
+        morphs[2] = dom.createMorphAt(fragment,4,4,contextualElement);
+        dom.insertBoundary(fragment, 0);
+        dom.insertBoundary(fragment, null);
+        return morphs;
+      },
+      statements: [
+        ["block","if",[["get","confirmText",["loc",[null,[1,6],[1,17]]]]],[],0,null,["loc",[null,[1,0],[6,7]]]],
+        ["block","if",[["get","cancelText",["loc",[null,[8,6],[8,16]]]]],[],1,null,["loc",[null,[8,0],[12,7]]]],
+        ["block","if",[["get","closeText",["loc",[null,[14,6],[14,15]]]]],[],2,null,["loc",[null,[14,0],[18,7]]]]
+      ],
+      locals: [],
+      templates: [child0, child1, child2]
+    };
+  }()));
+
+});
+define('ember-widgets/templates/components/modal_header', ['exports'], function (exports) {
+
+  'use strict';
+
+  exports['default'] = Ember.HTMLBars.template((function() {
+    return {
+      meta: {
+        "revision": "Ember@1.13.7",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 1,
+            "column": 0
+          },
+          "end": {
+            "line": 3,
+            "column": 0
+          }
+        },
+        "moduleName": "modules/ember-widgets/templates/components/modal_header.hbs"
+      },
+      arity: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      buildFragment: function buildFragment(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createElement("button");
+        dom.setAttribute(el1,"type","button");
+        dom.setAttribute(el1,"class","close");
+        var el2 = dom.createTextNode("×");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createElement("h4");
+        dom.setAttribute(el1,"class","modal-title");
+        var el2 = dom.createComment("");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+        var element0 = dom.childAt(fragment, [0]);
+        var morphs = new Array(2);
+        morphs[0] = dom.createElementMorph(element0);
+        morphs[1] = dom.createMorphAt(dom.childAt(fragment, [2]),0,0);
+        return morphs;
+      },
+      statements: [
+        ["element","action",["sendClose"],[],["loc",[null,[1,36],[1,58]]]],
+        ["content","headerText",["loc",[null,[2,24],[2,38]]]]
       ],
       locals: [],
       templates: []
@@ -87425,7 +88162,7 @@ define('ember-widgets/templates/components/multi-select-item', ['exports'], func
             "column": 0
           },
           "end": {
-            "line": 2,
+            "line": 5,
             "column": 0
           }
         },
@@ -87436,20 +88173,33 @@ define('ember-widgets/templates/components/multi-select-item', ['exports'], func
       hasRendered: false,
       buildFragment: function buildFragment(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createComment("");
+        var el1 = dom.createElement("div");
+        var el2 = dom.createComment("");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createElement("a");
+        dom.setAttribute(el1,"class","ember-select-search-choice-close");
+        dom.setAttribute(el1,"href","#");
+        dom.setAttribute(el1,"tabIndex","-1");
+        var el2 = dom.createTextNode("×\n");
+        dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
         return el0;
       },
       buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-        var morphs = new Array(1);
-        morphs[0] = dom.createMorphAt(fragment,0,0,contextualElement);
-        dom.insertBoundary(fragment, 0);
+        var element0 = dom.childAt(fragment, [2]);
+        var morphs = new Array(2);
+        morphs[0] = dom.createMorphAt(dom.childAt(fragment, [0]),0,0);
+        morphs[1] = dom.createElementMorph(element0);
         return morphs;
       },
       statements: [
-        ["content","yield",["loc",[null,[1,0],[1,9]]]]
+        ["content","view.label",["loc",[null,[1,5],[1,19]]]],
+        ["element","action",["removeSelectItem",["get","view.content",["loc",[null,[3,30],[3,42]]]]],[],["loc",[null,[3,2],[3,44]]]]
       ],
       locals: [],
       templates: []
