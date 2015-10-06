@@ -264,7 +264,7 @@ define('dummy/ember-widgets/tests/modules/ember-widgets/components/accordion-ite
 
   QUnit.module('JSHint - modules/ember-widgets/components');
   QUnit.test('modules/ember-widgets/components/accordion-item.js should pass jshint', function (assert) {
-    assert.ok(true, 'modules/ember-widgets/components/accordion-item.js should pass jshint.');
+    assert.ok(false, 'modules/ember-widgets/components/accordion-item.js should pass jshint.\nmodules/ember-widgets/components/accordion-item.js: line 46, col 55, Expected an assignment or function call and instead saw an expression.\n\n1 error');
   });
 
 });
@@ -274,7 +274,7 @@ define('dummy/ember-widgets/tests/modules/ember-widgets/components/carousel-grou
 
   QUnit.module('JSHint - modules/ember-widgets/components');
   QUnit.test('modules/ember-widgets/components/carousel-group.js should pass jshint', function (assert) {
-    assert.ok(true, 'modules/ember-widgets/components/carousel-group.js should pass jshint.');
+    assert.ok(false, 'modules/ember-widgets/components/carousel-group.js should pass jshint.\nmodules/ember-widgets/components/carousel-group.js: line 97, col 25, Expected an assignment or function call and instead saw an expression.\n\n1 error');
   });
 
 });
@@ -334,7 +334,7 @@ define('dummy/ember-widgets/tests/modules/ember-widgets/components/modal-box.jsh
 
   QUnit.module('JSHint - modules/ember-widgets/components');
   QUnit.test('modules/ember-widgets/components/modal-box.js should pass jshint', function (assert) {
-    assert.ok(true, 'modules/ember-widgets/components/modal-box.js should pass jshint.');
+    assert.ok(false, 'modules/ember-widgets/components/modal-box.js should pass jshint.\nmodules/ember-widgets/components/modal-box.js: line 146, col 19, Expected an assignment or function call and instead saw an expression.\n\n1 error');
   });
 
 });
@@ -504,7 +504,7 @@ define('dummy/ember-widgets/tests/modules/ember-widgets/mixins/style-bindings.js
 
   QUnit.module('JSHint - modules/ember-widgets/mixins');
   QUnit.test('modules/ember-widgets/mixins/style-bindings.js should pass jshint', function (assert) {
-    assert.ok(true, 'modules/ember-widgets/mixins/style-bindings.js should pass jshint.');
+    assert.ok(false, 'modules/ember-widgets/mixins/style-bindings.js should pass jshint.\nmodules/ember-widgets/mixins/style-bindings.js: line 28, col 64, Expected an assignment or function call and instead saw an expression.\n\n1 error');
   });
 
 });
@@ -515,6 +515,26 @@ define('dummy/ember-widgets/tests/modules/ember-widgets/mixins/tabbable-modal.js
   QUnit.module('JSHint - modules/ember-widgets/mixins');
   QUnit.test('modules/ember-widgets/mixins/tabbable-modal.js should pass jshint', function (assert) {
     assert.ok(true, 'modules/ember-widgets/mixins/tabbable-modal.js should pass jshint.');
+  });
+
+});
+define('dummy/ember-widgets/tests/modules/ember-widgets/utils/color-picker.jshint', function () {
+
+  'use strict';
+
+  QUnit.module('JSHint - modules/ember-widgets/utils');
+  QUnit.test('modules/ember-widgets/utils/color-picker.js should pass jshint', function (assert) {
+    assert.ok(true, 'modules/ember-widgets/utils/color-picker.js should pass jshint.');
+  });
+
+});
+define('dummy/ember-widgets/tests/modules/ember-widgets/utils/widget-config.jshint', function () {
+
+  'use strict';
+
+  QUnit.module('JSHint - modules/ember-widgets/utils');
+  QUnit.test('modules/ember-widgets/utils/widget-config.js should pass jshint', function (assert) {
+    assert.ok(true, 'modules/ember-widgets/utils/widget-config.js should pass jshint.');
   });
 
 });
@@ -2204,7 +2224,7 @@ define('dummy/templates/accordion', ['exports'], function (exports) {
         return morphs;
       },
       statements: [
-        ["block","accordion-component",[],[],0,null,["loc",[null,[8,8],[18,32]]]]
+        ["block","accordion-group",[],[],0,null,["loc",[null,[8,8],[18,28]]]]
       ],
       locals: [],
       templates: [child0]
@@ -2302,7 +2322,7 @@ define('dummy/templates/carousel', ['exports'], function (exports) {
             var el1 = dom.createTextNode("            ");
             dom.appendChild(el0, el1);
             var el1 = dom.createElement("img");
-            dom.setAttribute(el1,"src","img/bootstrap-mdo-sfmoma-01.jpg");
+            dom.setAttribute(el1,"src","assets/img/bootstrap-mdo-sfmoma-01.jpg");
             dom.setAttribute(el1,"alt","");
             dom.appendChild(el0, el1);
             var el1 = dom.createTextNode("\n");
@@ -2342,7 +2362,7 @@ define('dummy/templates/carousel', ['exports'], function (exports) {
             var el1 = dom.createTextNode("            ");
             dom.appendChild(el0, el1);
             var el1 = dom.createElement("img");
-            dom.setAttribute(el1,"src","img/bootstrap-mdo-sfmoma-02.jpg");
+            dom.setAttribute(el1,"src","assets/img/bootstrap-mdo-sfmoma-02.jpg");
             dom.setAttribute(el1,"alt","");
             dom.appendChild(el0, el1);
             var el1 = dom.createTextNode("\n");
@@ -2382,7 +2402,7 @@ define('dummy/templates/carousel', ['exports'], function (exports) {
             var el1 = dom.createTextNode("            ");
             dom.appendChild(el0, el1);
             var el1 = dom.createElement("img");
-            dom.setAttribute(el1,"src","img/bootstrap-mdo-sfmoma-03.jpg");
+            dom.setAttribute(el1,"src","assets/img/bootstrap-mdo-sfmoma-03.jpg");
             dom.setAttribute(el1,"alt","");
             dom.appendChild(el0, el1);
             var el1 = dom.createTextNode("\n");
@@ -2524,7 +2544,7 @@ define('dummy/templates/carousel', ['exports'], function (exports) {
         dom.appendChild(el4, el5);
         var el5 = dom.createElement("pre");
         dom.setAttribute(el5,"class","prettyprint lang-html");
-        var el6 = dom.createTextNode("{{#carousel-component}}");
+        var el6 = dom.createTextNode("{{#carousel-group}}");
         dom.appendChild(el5, el6);
         var el6 = dom.createElement("br");
         dom.appendChild(el5, el6);
@@ -2564,7 +2584,7 @@ define('dummy/templates/carousel', ['exports'], function (exports) {
         dom.appendChild(el5, el6);
         var el6 = dom.createElement("br");
         dom.appendChild(el5, el6);
-        var el6 = dom.createTextNode("{{/carousel-component}}");
+        var el6 = dom.createTextNode("{{/carousel-group}}");
         dom.appendChild(el5, el6);
         dom.appendChild(el4, el5);
         var el5 = dom.createTextNode("\n      ");
@@ -2589,7 +2609,7 @@ define('dummy/templates/carousel', ['exports'], function (exports) {
         return morphs;
       },
       statements: [
-        ["block","carousel-component",[],[],0,null,["loc",[null,[8,8],[18,31]]]]
+        ["block","carousel-group",[],[],0,null,["loc",[null,[8,8],[18,27]]]]
       ],
       locals: [],
       templates: [child0]
@@ -6589,7 +6609,7 @@ define('dummy/templates/popover', ['exports'], function (exports) {
       },
       statements: [
         ["block","popover-link-component",[],["tagName","button","class","btn btn-primary","title","Hello","content","Hello World!"],0,null,["loc",[null,[15,8],[18,35]]]],
-        ["block","popover-link-component",[],["tagName","button","class","btn btn-primary","placement","top-right","content",["subexpr","@mut",[["get","model",[]]],[],[]],"title","Derp","contentViewClass","App.CustomPopoverContentView"],1,null,["loc",[null,[34,8],[40,35]]]],
+        ["block","popover-link-component",[],["tagName","button","class","btn btn-primary","placement","top-right","content","model","title","Derp","contentViewClass","App.CustomPopoverContentView"],1,null,["loc",[null,[34,8],[40,35]]]],
         ["block","popover-link-component",[],["tagName","button","class","btn btn-primary","placement","right","content",["subexpr","@mut",[["get","model",[]]],[],[]],"title","Derp","contentViewClass","App.CustomPopoverContentView"],2,null,["loc",[null,[47,8],[53,35]]]],
         ["block","popover-link-component",[],["tagName","button","class","btn btn-primary","placement","bottom-right","content",["subexpr","@mut",[["get","model",[]]],[],[]],"title","Derp","contentViewClass","App.CustomPopoverContentView"],3,null,["loc",[null,[60,8],[66,35]]]],
         ["block","popover-link-component",[],["tagName","button","class","btn btn-primary","placement","bottom","content",["subexpr","@mut",[["get","model",[]]],[],[]],"title","Derp","contentViewClass","App.CustomPopoverContentView"],4,null,["loc",[null,[73,8],[79,35]]]],
@@ -10611,7 +10631,7 @@ catch(err) {
 if (runningTests) {
   require("dummy/tests/test-helper");
 } else {
-  require("dummy/app")["default"].create({"name":"ember-widgets","version":"0.0.0+a1640346"});
+  require("dummy/app")["default"].create({"name":"ember-widgets","version":"0.0.0+"});
 }
 
 /* jshint ignore:end */
