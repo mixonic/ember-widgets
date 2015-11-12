@@ -1,0 +1,13 @@
+{{!-- {{view Ember.CollectionView tagName="ol" class="carousel-indicators"
+  content="view.content" itemViewClass="Ember.Widgets.CarouselIndicator"
+}} --}}
+<ol class="carousel-indicator">
+  {{#each view.content as |item|}}
+    {{carousel-indicator}}
+  {{/each}}
+</ol>
+<div class="carousel-inner">
+  {{yield}}
+</div>
+<a class="left carousel-control"  href="#" {{action "prev"}}>‹</a>
+<a class="right carousel-control" href="#" {{action "next"}}>›</a>
