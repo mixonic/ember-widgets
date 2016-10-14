@@ -99,8 +99,6 @@ module.exports = (grunt) ->
           'build/app/templates.js': ["app/templates/**/*.hbs"]
 
     neuter:
-      options:
-        includeSourceURL: yes
       srcs:
         files:
           "dist/js/ember-widgets.js": "build/src/ember_widgets.js"
