@@ -1,8 +1,8 @@
-{{view listView
+{{#vertical-collection groupedContent
   tagName="ul"
   classNames="ember-select-results"
-  heightBinding="dropdownHeight"
-  rowHeightBinding="rowHeight"
-  contentBinding="groupedContent"
-  itemViewClassBinding="itemView"
-}}
+  estimateHeight=20
+  staticHeight=true
+as |item|}}
+  {{view itemView content=item}}
+{{/vertical-collection}}
